@@ -1,0 +1,100 @@
+*{
+  padding: 0;
+  margin:  0;
+}
+
+/* Css till toppen av sidan */
+#top{
+  width: 98.9vw;
+  height: 10vh;
+  background-color: green;
+}
+
+/* Css till vänstra delan av sidan */
+#left{
+  width:  10vw;
+  height: 190vh;
+  float: left;
+  background-color: blue;
+  background-image: url(https://cdn.pixabay.com/photo/2015/01/11/02/11/christmas-presents-595850_960_720.jpg);
+  background-size: cover;
+}
+
+/* Css till högra delen av sidan*/
+#right{
+  width: 10vw;
+  height: 190vh;
+  float: right;
+  background-color: orange;
+  background-image: url(https://cdn.pixabay.com/photo/2015/01/11/02/11/christmas-presents-595850_960_720.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Css till mitten av sidan, där tabellen är.
+   Mittensidorna och mitten var tvungna att ha en höjd på 190vh för att hela tabellen skulle få plats i dem */
+#center{
+  background-color: red;
+  width: 98.9vw;
+  height: 190vh;
+}
+
+/* Css för id till tabellen */
+#table{
+  font-size: 30px;
+  width: 78.9vw;
+}
+
+/* Css för alla td som finns i tabellen */
+#table td{
+  padding: 30px;
+  border: 1px solid black;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 10vh;
+}
+
+/* Css för musik "knappen" */
+#musik{
+  background-color: yellow;
+  width: 20vw;
+  height: 5vh;
+  float: left;
+  margin-left: 20vw;
+  margin-top: 2.5vh;
+  text-align: center;
+}
+
+#musik h3{
+  padding: 7.5px;
+  border: 1px solid white;
+}
+
+#musik h3:hover{
+  background-color: orange;
+}
+
+/* Css för slumpningen av en julklapp */
+#Random{
+  background-color: yellow;
+  width: 20vw;
+  height: 5vh;
+  float:  left;
+  margin-left: 20vw;
+  margin-top: 2.5vh;
+  text-align: center;
+}
+
+#Random a{
+  text-decoration: none;
+  display: block;
+  color: black;
+  border: 1px solid white;
+  padding: 9px;
+}
+
+#Random a:hover{
+  background-color: orange;
+}

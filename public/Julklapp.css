@@ -1,0 +1,76 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+
+#top{
+  width: 100vw;
+  height: 10vh;
+  background-color: green;
+}
+
+#left{
+  float: left;
+  height: 100vh;
+  width: 20vw;
+  background-image: url(https://cdn.pixabay.com/photo/2015/01/11/02/11/christmas-presents-595850_960_720.jpg);
+}
+
+#right{
+  float: right;
+  height: 100vh;
+  width: 20vw;
+  background-image: url(https://cdn.pixabay.com/photo/2015/01/11/02/11/christmas-presents-595850_960_720.jpg);
+}
+
+#center{
+  width: 100vw;
+  height: 90vh;
+  background-color: red;
+}
+
+#Tillbaka{
+background-color: yellow;
+width: 40vw;
+height: 5vh;
+float:  left;
+margin-left: 10vw;
+margin-top: 2.5vh;
+text-align: center;
+}
+
+#Tillbaka a{
+  text-decoration: none;
+  display: block;
+  color: black;
+  border: 1px solid white;
+  padding: 9px;
+}
+
+#Tillbaka a:hover{
+  background-color: orange;
+}
+
+#namn{
+  text-align: center;
+  width: 100vw;
+  height: 10vh;
+}
+
+#bild{
+  width: 100vw;
+  height: 60vh;
+}
+
+#bild img{
+  width: 49.9vw;
+  margin-left: 5vw;
+  margin-right: 4vw;
+  height: 60vh;
+}
+
+#länk{
+  width: 100vw;
+  height: 10vh;
+  text-align: center;
+}

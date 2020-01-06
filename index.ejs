@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+
+<!--
+  HTML sidan
+  Den är skriven i .ejs för att göra det enklare att få värderna från phpmyadmin
+ -->
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title> God Jul </title>
+
+
+    <!-- För att css ska fungera behöver den vara länkad med ./static
+         I Css finns alla egenskaper som gör så att sidan ser ut som den är. Utom för inläggningen av bilder i tabellen, där har jag direkt använt style= "background-image: för att få in dem på enklaste sättet
+    -->
+    <link rel = "stylesheet" href = "./static/index.css">
+
+  </head>
+  <body>
+
+    <!-- Div till toppen av sidan -->
+    <div id = "top">
+
+      <!-- Div för slumpningen av en julklapp -->
+      <div id = "Random">
+        <a href = "./DinJulklapp.ejs"> Hitta din julklapp </a>
+      </div>
+
+      <!-- Det är så lite javascript som används så jag lägger den inte i en egen fil
+           javascriptet gör det möjligt att spela upp musiken  -->
+      <script>
+        function play(){
+          var audio = document.getElementById("audio");
+          audio.play();}
+      </script>
+
+      <!-- Div för att spela julmusik -->
+      <div id = "musik">
+        <h3 onclick = "play()"> Spela musik </h3>
+        <audio id = "audio" src = "./static/julskinka.mp3"> </audio>
+      </div>
+
+    </div>
+
+    <!-- Div till vänstra sidan -->
+    <div id = "left">
+    </div>
+
+    <!-- Div till högra sidan -->
+    <div id = "right">
+    </div>
+
+    <!-- Div till mitten av sidan, och till tabellen  -->
+    <div id = "center">
+    <table id = "table">
+      <tr>
+        <th>  Årets Julklappar 2010-2019 </th>
+      </tr>
+
+      <!-- Tabellen där alla värden från phpMyAdmin läggs in i
+           Bilderna som ligger i phpMyAdmin har en sökväg som namn, och genom att använda "background-image" kan de läggas in i Tabellen
+           Länkar fungerar på samma sätt
+      -->
+
+      <tr>
+        <td> <%= result[0].name %> </td>
+        <td style= "background-image: url('<%= result[0].julklapp %>')" > </td>
+        <td> <a href = "<%= result[0].länk %>"> Länk </td>
+      </tr>
+
+      <tr>
+        <td> <%= result[1].name %> </td>
+        <td style= "background-image: url('<%= result[1].julklapp %>')" > </td>
+        <td> <a href = "<%= result[1].länk %>"> Länk </td>
+      </tr>
+
+      <tr>
+        <td> <%= result[2].name %> </td>
+        <td style= "background-image: url('<%= result[2].julklapp %>')" > </td>
+        <td> <a href = "<%= result[2].länk %>"> Länk </td>
+      </tr>
+
+      <tr>
+        <td> <%= result[3].name %> </td>
+        <td style= "background-image: url('<%= result[3].julklapp %>')" > </td>
+        <td> <a href = "<%= result[3].länk %>"> Länk </td>
+      </tr>
+
+      <tr>
+        <td> <%= result[4].name %> </td>
+        <td style= "background-image: url('<%= result[4].julklapp %>')" > </td>
+        <td> <a href = "<%= result[4].länk %>"> Länk </td>
+      </tr>
+
+
+      <tr>
+        <td> <%= result[5].name %> </td>
+        <td style= "background-image: url('<%= result[5].julklapp %>')" > </td>
+        <td> <a href = "<%= result[5].länk %>"> Länk </td>
+      </tr>
+
+      <tr>
+        <td> <%= result[6].name %> </td>
+        <td style= "background-image: url('<%= result[6].julklapp %>')" > </td>
+        <td> <a href = "<%= result[6].länk %>"> Länk </td>
+      </tr>
+
+      <tr>
+        <td> <%= result[7].name %> </td>
+        <td style= "background-image: url('<%= result[7].julklapp %>')" > </td>
+        <td> <a href = "<%= result[7].länk %>"> Länk </td>
+      </tr>
+
+      <tr>
+        <td> <%= result[8].name %> </td>
+        <td style= "background-image: url('<%= result[8].julklapp %>')" > </td>
+        <td> <a href = "<%= result[8].länk %>"> Länk </td>
+      </tr>
+
+      <tr>
+        <td> <%= result[9].name %> </td>
+        <td style= "background-image: url('<%= result[9].julklapp %>')" > </td>
+        <td> <a href = "<%= result[9].länk %>"> Länk </td>
+      </tr>
+
+
+
+    </table>
+  </div>
+
+  </body>
+</html>

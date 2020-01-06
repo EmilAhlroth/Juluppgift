@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title> Grattis!</title>
+    <link rel = "stylesheet" href = "./static/Julklapp.css">
+  </head>
+  <body>
+
+    <!-- Div för vänstra delen av sidan -->
+    <div id = "left">
+      </div>
+
+  <!-- Div för hägra delen av sidan -->
+    <div id = "right">
+      </div>
+
+        <!-- Div för toppen av sidan -->
+      <div id = "top">
+
+        <!-- "Knapp" för att gå tillbaka till indexsidan. Eftersom den renderas som "./" behövs det inte mer för att hitta sökvägen -->
+        <div id = "Tillbaka">
+          <a href = "./"> Tillbaka </a>
+        </div>
+
+        </div>
+    <!-- Div till mitten av sidan -->
+  <div id = "center">
+      <!-- H1 där den slumpade julklappen läggs in -->
+    <h1 id = "namn"> </h1>
+    <h1 id = "bild"> </h1>
+    <h1 id = "länk"> </h1>
+  </div>
+  <!-- Javascriptet är inte i en seperat fil eftersom så lite används -->
+  <script>
+
+  /* Lägger in det slumvalda namnet i */
+  document.getElementById("namn").innerHTML = "Du fick <%= result[x].name %>";
+
+  document.getElementById("bild").innerHTML = "<img src = <%= result[x].julklapp %>>"
+
+  document.getElementById("länk").innerHTML = "<a href = <%= result[x].länk %>> Länk </a> "
+
+  </script>
+
+  </body>
+</html>
